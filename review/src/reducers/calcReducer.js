@@ -1,4 +1,6 @@
 const reducer = (state, action) => {
+  // { type: "ADD", payload: 5 }
+  // state.currentValue = 0 => run this action => state.currentValue = 5
     switch (action.type) {
       case "ADD":
         return { ...state, currentValue: state.currentValue + action.payload };
