@@ -1,5 +1,5 @@
 import React, { useState, useReducer } from 'react';
-import actions from '../actions/actions';
+import action from '../actions/actions';
 import reducer from '../reducers/reducer';
 import { initialState } from '../reducers/reducer';
 
@@ -16,7 +16,7 @@ const Title = () => {
   // };
   const handleChanges = e => {
     console.log(e);
-    dispatch(actions.setNewTitleText(e.target.value));
+    dispatch(action.setNewTitleText(e.target.value));
   }
 
   return (
@@ -24,7 +24,7 @@ const Title = () => {
       {!state.editing ? (
         <h1>
           {state.title}{' '}
-          <i onClick={() => dispatch(actions.setEditing(!state.editing))} className="far fa-edit" />
+          <i onClick={() => dispatch(action.setEditing(!state.editing))} className="far fa-edit" />
         </h1>
       ) : (
         <div>

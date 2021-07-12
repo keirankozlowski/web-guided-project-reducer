@@ -17,7 +17,7 @@ const reducer = (state, action) => {
         case(SET_EDITING):
             return({ ...state, editing: action.payload });
         case(SET_NEW_TITLE_TEXT):
-            return({  });
+            return({ ...state, newTitleText: action.payload });
         default:
             return(state);
     }
