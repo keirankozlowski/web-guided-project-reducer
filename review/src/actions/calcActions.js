@@ -12,3 +12,13 @@ let clearAction = () => {
 
 // make an action for ADD_TO_MEMORY
 // data structure for state: { currentValue:float , memory: float }
+let addToMemoryAction = () => {
+    return { type: "ADD_TO_MEMORY" }
+}
+
+export default {
+    addAction,
+    subtractAction,
+    clearAction,
+    addToMemoryAction
+}
